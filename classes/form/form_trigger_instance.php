@@ -113,6 +113,7 @@ class form_trigger_instance extends \moodleform {
 
         $elementname = 'instancename';
         $mform->addElement('text', $elementname, get_string('trigger_instancename', 'tool_lifecycle'));
+        $mform->addHelpButton($elementname, 'trigger_instancename', 'tool_lifecycle');
         $mform->setType($elementname, PARAM_TEXT);
 
         // If workflow is active, then all trigger types have to be used to also show the preset triggers.
@@ -126,6 +127,7 @@ class form_trigger_instance extends \moodleform {
         $mform->addElement('select', $elementname,
             get_string('trigger_subpluginname', 'tool_lifecycle'),
             $triggers);
+        $mform->addHelpButton($elementname, 'trigger_subpluginname', 'tool_lifecycle');
         $mform->setType($elementname, PARAM_TEXT);
 
         // Insert the subplugin specific settings.
