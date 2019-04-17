@@ -16,17 +16,17 @@ addons:
 
 
 php:
-  - 7.0
+#  - 7.0
   - 7.1
 
 env:
   matrix:
-   - DB=pgsql MOODLE_BRANCH=MOODLE_34_STABLE
-   - DB=pgsql MOODLE_BRANCH=MOODLE_35_STABLE
-   - DB=pgsql MOODLE_BRANCH=master
-   - DB=mysqli MOODLE_BRANCH=MOODLE_34_STABLE
+#   - DB=pgsql MOODLE_BRANCH=MOODLE_34_STABLE
+#   - DB=pgsql MOODLE_BRANCH=MOODLE_35_STABLE
+#   - DB=pgsql MOODLE_BRANCH=master
+#   - DB=mysqli MOODLE_BRANCH=MOODLE_34_STABLE
    - DB=mysqli MOODLE_BRANCH=MOODLE_35_STABLE
-   - DB=mysqli MOODLE_BRANCH=master
+#   - DB=mysqli MOODLE_BRANCH=master
 
 matrix:
  allow_failures:
@@ -71,5 +71,5 @@ after_success:
   - bash <(curl -s https://codecov.io/bash)
 
 stages:
-  - static
+#  - static
   - test
